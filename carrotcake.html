@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrot Cake Recipe</title>
+    <style>
+      /* CSS Styles */
+      body {
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        background-color: #fffaf6;
+        color: hsl(339, 27%, 45%);
+      }
+
+      header {
+        background-color: #fbe7c6;
+        text-align: center;
+        padding: 2rem;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      section {
+        padding: 2rem;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      section h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: hsl(339, 27%, 45%);
+      }
+
+      ul,
+      ol {
+        font-size: 1.1rem;
+        color: #555;
+      }
+
+      footer {
+        background-color: #fbe7c6;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 2rem;
+        font-size: 1rem;
+      }
+
+      footer a {
+        text-decoration: none;
+        color: hsl(339, 27%, 45%);
+      }
+
+      footer a:hover {
+        color: #d6336c;
+      }
+
+      .cake-image {
+        width: 100%;
+        max-width: 250px;
+        margin: 2rem auto; /* 'auto' for horizontal centering */
+        display: block; /* Makes the image a block-level element */
+        border-radius: 10px;
+      }
+
+      /* Button Styling */
+      .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #d6336c;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        margin-top: 10px;
+      }
+
+      .btn:hover {
+        background-color: #e76f51;
+      }
+
+      @media screen and (max-width: 768px) {
+        header h1 {
+          font-size: 2rem;
+        }
+
+        section {
+          padding: 1.5rem;
+        }
+
+        section h2 {
+          font-size: 1.8rem;
+        }
+      }
+      #conversion-tool {
+        background-color: #f0e4d7;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin-top: 2rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      #conversion-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      #conversion-form label {
+        font-weight: bold;
+      }
+
+      #conversion-form input,
+      #conversion-form select {
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      #conversion-form button {
+        padding: 0.7rem;
+        background-color: #d6336c;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      #conversion-form button:hover {
+        background-color: #e76f51;
+      }
+
+      #conversion-result {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Carrot Cake Recipe</h1>
+    </header>
+
+    <section>
+      <img
+        src="images/carrotcake.jpg"
+        alt="Delicious Carrot Cake"
+        class="cake-image"
+      />
+    </section>
+
+    <section>
+      <h2>Ingredients:</h2>
+      <ul>
+        <li>2 cups all-purpose flour</li>
+        <li>2 cups granulated sugar</li>
+        <li>1 tsp baking soda</li>
+        <li>1 tsp baking powder</li>
+        <li>1/2 tsp salt</li>
+        <li>1 tsp ground cinnamon</li>
+        <li>1/2 tsp ground nutmeg</li>
+        <li>4 large eggs</li>
+        <li>1 cup vegetable oil</li>
+        <li>2 cups grated carrots</li>
+        <li>1 cup chopped walnuts (optional)</li>
+        <li>1 tsp vanilla extract</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Instructions:</h2>
+      <ol>
+        <li>Preheat oven to 350°F (175°C).</li>
+        <li>
+          In a large bowl, whisk together dry ingredients (flour, sugar, baking
+          soda, baking powder, salt, cinnamon, nutmeg).
+        </li>
+        <li>
+          In another bowl, beat together eggs, oil, and vanilla extract until
+          smooth.
+        </li>
+        <li>
+          Gradually add the dry ingredients to the wet mixture, mixing until
+          fully incorporated.
+        </li>
+        <li>Fold in grated carrots and walnuts (if using).</li>
+        <li>
+          Pour the batter into a greased and floured 9x13-inch baking pan.
+        </li>
+        <li>
+          Bake for 30-35 minutes or until a toothpick inserted comes out clean.
+        </li>
+        <li>Let the cake cool completely before frosting.</li>
+        <li>Frost with cream cheese frosting and enjoy!</li>
+      </ol>
+    </section>
+    <section id="conversion-tool">
+      <h2>Baking Conversion Tool</h2>
+      <form id="conversion-form">
+        <label for="quantity">Amount:</label>
+        <input
+          type="number"
+          id="quantity"
+          name="quantity"
+          placeholder="Enter amount"
+          required
+        />
+
+        <label for="from-unit">From Unit:</label>
+        <select id="from-unit" name="from-unit">
+          <option value="cups">Cups</option>
+          <option value="grams">Grams</option>
+          <option value="tablespoons">Tablespoons</option>
+          <option value="teaspoons">Teaspoons</option>
+          <!-- Add other units as needed -->
+        </select>
+
+        <label for="to-unit">To Unit:</label>
+        <select id="to-unit" name="to-unit">
+          <option value="cups">Cups</option>
+          <option value="grams">Grams</option>
+          <option value="tablespoons">Tablespoons</option>
+          <option value="teaspoons">Teaspoons</option>
+          <!-- Add other units as needed -->
+        </select>
+
+        <button type="submit">Convert</button>
+      </form>
+      <div id="conversion-result">
+        <!-- Conversion result will appear here -->
+      </div>
+    </section>
+
+    <script>
+      // JavaScript for the conversion functionality (example)
+      document
+        .getElementById("conversion-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const quantity = document.getElementById("quantity").value;
+          const fromUnit = document.getElementById("from-unit").value;
+          const toUnit = document.getElementById("to-unit").value;
+
+          // Add your conversion logic here
+          // For simplicity, we just output the input values (you can enhance this as needed)
+          const result = `Converting ${quantity} ${fromUnit} to ${toUnit}...`;
+
+          document.getElementById("conversion-result").innerHTML = result;
+        });
+    </script>
+
+    <footer>
+      <p>Back to <a href="index.html">Home</a></p>
+    </footer>
+  </body>
+</html>
